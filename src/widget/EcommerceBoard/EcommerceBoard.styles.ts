@@ -69,6 +69,7 @@ export const ProductItem = styled("div")({
   width: "100%",
   maxWidth: "450px",
   borderBottom: "1px solid #E0E0E0",
+  boxSizing: "border-box",
 
   "& div": {
     display: "flex",

@@ -21,7 +21,6 @@ const DashboardPage = () => {
       },
     },
   });
-  console.log("productsData: ", productsData);
 
   const handleNotificationsClick = () => {
     console.log("Натиснуто на нотифікації");
@@ -37,7 +36,7 @@ const DashboardPage = () => {
   return (
     <div>
       <Header
-        title="Dashboard"
+        title=""
         showNotification={true}
         onNotificationsClick={handleNotificationsClick}
         isSidebarExpanded={isSidebarExpanded}

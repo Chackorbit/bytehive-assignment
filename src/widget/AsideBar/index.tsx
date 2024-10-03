@@ -19,6 +19,8 @@ import {
   Description,
 } from "@mui/icons-material";
 
+import { Logo } from "../../assets/Logo";
+
 interface SidebarProps {
   onHoverChange: (hovered: boolean) => void;
 }
@@ -57,50 +59,99 @@ const Sidebar: React.FC<SidebarProps> = ({ onHoverChange }) => {
     >
       <div>
         <List>
-          <ListItem sx={{ paddingTop: "20px", paddingBottom: "20px" }}>
+          <ListItem
+            sx={{
+              paddingTop: "20px",
+              paddingBottom: "20px",
+              cursor: "pointer",
+              "&:hover": {
+                backgroundColor: "#ffffff10",
+                color: "#ffffff",
+              },
+            }}
+          >
             <ListItemIcon>
-              <Home sx={{ color: "#94a3b8" }} />
+              {isHovered ? <Logo width="40" height="40" /> : <Logo />}
             </ListItemIcon>
             {isHovered && (
               <ListItemText
                 primary="Devias"
                 secondary="Premium tier"
                 sx={{ color: "#cbd5e1" }}
+                secondaryTypographyProps={{
+                  sx: { color: "#cbd5e1" },
+                }}
               />
             )}
           </ListItem>
 
-          <Divider sx={{ backgroundColor: "#334155" }} />
+          <Divider sx={{ backgroundColor: "#ffffff10" }} />
 
-          <ListItem component="li">
+          <ListItem
+            component="li"
+            sx={{
+              cursor: "pointer",
+              "&:hover": {
+                backgroundColor: "#ffffff10",
+                color: "#ffffff",
+              },
+            }}
+          >
             <ListItemIcon>
               <Home sx={{ color: "#94a3b8" }} />
             </ListItemIcon>
             {isHovered && <ListItemText primary="Overview" />}
           </ListItem>
 
-          <ListItem component="li">
+          <ListItem
+            component="li"
+            sx={{
+              cursor: "pointer",
+              "&:hover": {
+                backgroundColor: "#ffffff10",
+                color: "#ffffff",
+              },
+            }}
+          >
             <ListItemIcon>
               <Analytics sx={{ color: "#94a3b8" }} />
             </ListItemIcon>
             {isHovered && <ListItemText primary="Analytics" />}
           </ListItem>
 
-          <ListItem component="li">
+          <ListItem
+            component="li"
+            sx={{
+              cursor: "pointer",
+              "&:hover": {
+                backgroundColor: "#ffffff10",
+                color: "#ffffff",
+              },
+            }}
+          >
             <ListItemIcon>
               <ShoppingCart sx={{ color: "#94a3b8" }} />
             </ListItemIcon>
             {isHovered && <ListItemText primary="Ecommerce" />}
           </ListItem>
 
-          <ListItem component="li">
+          <ListItem
+            component="li"
+            sx={{
+              cursor: "pointer",
+              "&:hover": {
+                backgroundColor: "#ffffff10",
+                color: "#ffffff",
+              },
+            }}
+          >
             <ListItemIcon>
               <AttachMoney sx={{ color: "#94a3b8" }} />
             </ListItemIcon>
             {isHovered && <ListItemText primary="Crypto" />}
           </ListItem>
 
-          <Divider sx={{ backgroundColor: "#334155" }} />
+          <Divider sx={{ backgroundColor: "#ffffff10" }} />
 
           <ListItem>
             {isHovered && (
@@ -111,28 +162,64 @@ const Sidebar: React.FC<SidebarProps> = ({ onHoverChange }) => {
             )}
           </ListItem>
 
-          <ListItem component="li">
+          <ListItem
+            component="li"
+            sx={{
+              cursor: "pointer",
+              "&:hover": {
+                backgroundColor: "#ffffff10",
+                color: "#ffffff",
+              },
+            }}
+          >
             <ListItemIcon>
               <ListAlt sx={{ color: "#94a3b8" }} />
             </ListItemIcon>
             {isHovered && <ListItemText primary="Products" />}
           </ListItem>
 
-          <ListItem component="li">
+          <ListItem
+            component="li"
+            sx={{
+              cursor: "pointer",
+              "&:hover": {
+                backgroundColor: "#ffffff10",
+                color: "#ffffff",
+              },
+            }}
+          >
             <ListItemIcon>
               <ShoppingCart sx={{ color: "#94a3b8" }} />
             </ListItemIcon>
             {isHovered && <ListItemText primary="Orders" />}
           </ListItem>
 
-          <ListItem component="li">
+          <ListItem
+            component="li"
+            sx={{
+              cursor: "pointer",
+              "&:hover": {
+                backgroundColor: "#ffffff10",
+                color: "#ffffff",
+              },
+            }}
+          >
             <ListItemIcon>
               <Receipt sx={{ color: "#94a3b8" }} />
             </ListItemIcon>
             {isHovered && <ListItemText primary="Invoices" />}
           </ListItem>
 
-          <ListItem component="li">
+          <ListItem
+            component="li"
+            sx={{
+              cursor: "pointer",
+              "&:hover": {
+                backgroundColor: "#ffffff10",
+                color: "#ffffff",
+              },
+            }}
+          >
             <ListItemIcon>
               <LocalShipping sx={{ color: "#94a3b8" }} />
             </ListItemIcon>
@@ -149,9 +236,10 @@ const Sidebar: React.FC<SidebarProps> = ({ onHoverChange }) => {
             sx={{
               borderColor: "#94a3b8",
               color: "#ffffff",
+              cursor: "pointer",
               "&:hover": {
                 borderColor: "#ffffff",
-                backgroundColor: "#334155",
+                backgroundColor: "#ffffff04",
               },
             }}
           >
