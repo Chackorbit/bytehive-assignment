@@ -8,10 +8,9 @@ export const BoardContainer = styled("div")({
   marginTop: "50px",
   gap: "20px",
   padding: "20px",
-  width: "100%", // Додаємо 100% ширини для заповнення екрану
-  backgroundColor: "#f8f9fa", // Налаштування фону
-  borderRadius: "10px", // Закруглені краї
-  // boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.1)", // Додаємо тінь для вигляду
+  width: "100%",
+  backgroundColor: "#f8f9fa",
+  borderRadius: "10px",
 });
 
 export const HeaderEcommercTittle = styled("div")({
@@ -66,10 +65,10 @@ export const ProductItem = styled("div")({
   alignItems: "center",
   color: "#000000",
   borderRadius: "8px",
-  padding: "10px 16px", // Додаємо відступи всередині елементу
+  padding: "10px 16px",
   width: "100%",
-  maxWidth: "450px", // Максимальна ширина для кращого вигляду
-  borderBottom: "1px solid #E0E0E0", // Лінія між елементами
+  maxWidth: "450px",
+  borderBottom: "1px solid #E0E0E0",
 
   "& div": {
     display: "flex",
@@ -80,14 +79,12 @@ export const ProductItem = styled("div")({
 
   "& img": {
     width: "40px",
-    marginRight: "16px", // Відступ між зображенням і текстом
+    marginRight: "16px",
   },
 
   "& p": {
     display: "flex",
     flexDirection: "column",
-    // margin: "0 16px", // Відступ між блоками тексту
-    // minWidth: "120px", // Мінімальна ширина для вирівнювання тексту
   },
 
   "& span": {
@@ -100,7 +97,7 @@ export const ProductItem = styled("div")({
     backgroundColor: "#00000012",
     padding: "4px",
     borderRadius: "12px",
-    textAlign: "center", // Текст по центру всередині блока
+    textAlign: "center",
   },
 
   "& .title, .numberItem": {

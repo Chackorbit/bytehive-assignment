@@ -17,42 +17,42 @@ const Input = ({
   return (
     <TextField
       sx={{
-        backgroundColor: "#FFFFFF", // Постійний білий фон
-        borderRadius: "10px", // Закруглені кути
-        border: "1px solid #E0E0E0", // Загальний бордер 1px
+        backgroundColor: "#FFFFFF",
+        borderRadius: "10px",
+        border: "1px solid #E0E0E0",
         "& .MuiInputBase-root": {
-          backgroundColor: "#fff", // Білий фон для всіх станів
-          borderRadius: "10px", // Закруглені кути
+          backgroundColor: "#fff",
+          borderRadius: "10px",
           color: "#111927",
         },
         "& .MuiFilledInput-root::after, & .MuiFilledInput-root::before": {
-          display: "none", // Вимкнення псевдоелементів для filled варіанту
+          display: "none",
         },
         "& .MuiFilledInput-root": {
-          backgroundColor: "#fff", // Білий фон при filled варіанті
-          borderRadius: "10px", // Закруглені кути
-          border: "none", // Відсутність стандартного бордера
+          backgroundColor: "#fff",
+          borderRadius: "10px",
+          border: "none",
         },
         "& .MuiOutlinedInput-notchedOutline": {
-          border: "none", // Відсутність нижнього бордера
+          border: "none",
         },
         "& .MuiInputLabel-root": {
-          color: "#6C737F", // Колір тексту лейблу
+          color: "#6C737F",
         },
         "&:hover .MuiInputBase-root": {
-          backgroundColor: "#FFFFFF", // Залишається білим при ховері
+          backgroundColor: "#FFFFFF",
         },
         "&.Mui-focused .MuiInputBase-root": {
-          backgroundColor: "#FFFFFF", // Білий фон при фокусі
-          boxShadow: "none", // Вимкнення тіні
+          backgroundColor: "#FFFFFF",
+          boxShadow: "none",
         },
         "& .Mui-focused .MuiOutlinedInput-notchedOutline": {
-          border: "1px solid #E0E0E0", // Загальний бордер навіть при фокусі
+          border: "1px solid #E0E0E0",
         },
         "& input:-webkit-autofill": {
-          WebkitBoxShadow: "0 0 0 100px #fff inset !important", // Білий фон для автозаповнених полів
-          //   WebkitTextFillColor: "#000 !important", // Чорний текст для автозаповнення
-          borderRadius: "10px", // Закруглені кути для автозаповнених полів
+          WebkitBoxShadow: "0 0 0 100px #fff inset !important",
+
+          borderRadius: "10px",
         },
       }}
       label={label}

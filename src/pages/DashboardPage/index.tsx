@@ -17,7 +17,7 @@ const DashboardPage = () => {
     axios: {
       baseURL: "https://interview-api-8icc.onrender.com/",
       headers: {
-        Authorization: `Bearer ${token}`, // Передаємо заголовок з токеном
+        Authorization: `Bearer ${token}`,
       },
     },
   });
@@ -27,12 +27,10 @@ const DashboardPage = () => {
     console.log("Натиснуто на нотифікації");
   };
 
-  // Якщо запит на сервер триває, показуємо лоадер
   if (isLoading) {
     return <div>Loading...</div>;
   }
 
-  // Якщо сталася помилка при завантаженні даних
   if (isError) {
     return <div>Error loading products</div>;
   }
@@ -49,7 +47,7 @@ const DashboardPage = () => {
         <Sidebar onHoverChange={setIsSidebarExpanded} />
 
         <div style={{}}>
-          <EcommerceBoard products={productsData?.data} />
+          <EcommerceBoard products={productsData?.data ?? []} />
         </div>
       </div>
     </div>

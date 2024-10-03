@@ -1,9 +1,8 @@
 import React from "react";
-import { AppBar, Toolbar, Typography, IconButton } from "@mui/material";
+import { Typography, IconButton } from "@mui/material";
 import {
   AccountCircle,
   Notifications,
-  Settings,
   KeyboardArrowDown,
 } from "@mui/icons-material";
 import {
@@ -36,19 +35,16 @@ const Header: React.FC<HeaderProps> = ({
         sx={{
           paddingLeft: isSidebarExpanded
             ? "260px !important"
-            : "80px !important", // Зміщення залежно від стану сайдбара
-          transition: "padding 0.3s", // Плавна анімація зміщення
+            : "80px !important",
+          transition: "padding 0.3s",
         }}
       >
         <HeaderContainer>
-          {/* Лівий блок з назвою */}
           <TitleSection>
             <Typography variant="h6">{title}</Typography>
           </TitleSection>
 
-          {/* Правий блок з діями */}
           <ActionSection>
-            {/* Іконка нотифікацій */}
             {showNotification && (
               <IconButton
                 edge="end"
@@ -59,7 +55,6 @@ const Header: React.FC<HeaderProps> = ({
               </IconButton>
             )}
 
-            {/* Іконка профілю */}
             <IconButton edge="end" color="inherit">
               <AccountCircle />
             </IconButton>

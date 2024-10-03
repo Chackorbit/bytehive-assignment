@@ -1,17 +1,16 @@
 import { createTheme } from "@mui/material/styles";
 
-// Створюємо тему
 const theme = createTheme({
   palette: {
     primary: {
-      main: "#1976d2", // Основний колір
+      main: "#1976d2",
     },
     secondary: {
-      main: "#6366F1", // Вторинний колір
+      main: "#6366F1",
     },
   },
   typography: {
-    fontFamily: "Arial, sans-serif", // Налаштування шрифтів
+    fontFamily: "Arial, sans-serif",
     h1: {
       fontSize: "2rem",
       fontWeight: 600,
@@ -24,9 +23,9 @@ const theme = createTheme({
     MuiButton: {
       styleOverrides: {
         root: {
-          borderRadius: "8px", // Закруглені кути у кнопки
+          borderRadius: "8px",
           padding: "10px 20px",
-          textTransform: "none", // Текст без UpperCase
+          textTransform: "none",
         },
       },
     },

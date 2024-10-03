@@ -22,7 +22,8 @@ import { Typography } from "@mui/material";
 import RefreshIcon from "@mui/icons-material/Refresh";
 
 interface EcommerceBoardProps {
-  products: any[]; // Визначаємо, що products має бути масивом
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  products: any[];
 }
 
 const EcommerceBoard: React.FC<EcommerceBoardProps> = ({ products }) => {

@@ -57,7 +57,6 @@ const Sidebar: React.FC<SidebarProps> = ({ onHoverChange }) => {
     >
       <div>
         <List>
-          {/* Лого і назва */}
           <ListItem sx={{ paddingTop: "20px", paddingBottom: "20px" }}>
             <ListItemIcon>
               <Home sx={{ color: "#94a3b8" }} />
@@ -73,29 +72,28 @@ const Sidebar: React.FC<SidebarProps> = ({ onHoverChange }) => {
 
           <Divider sx={{ backgroundColor: "#334155" }} />
 
-          {/* Основні пункти меню */}
-          <ListItem button>
+          <ListItem component="li">
             <ListItemIcon>
               <Home sx={{ color: "#94a3b8" }} />
             </ListItemIcon>
             {isHovered && <ListItemText primary="Overview" />}
           </ListItem>
 
-          <ListItem button>
+          <ListItem component="li">
             <ListItemIcon>
               <Analytics sx={{ color: "#94a3b8" }} />
             </ListItemIcon>
             {isHovered && <ListItemText primary="Analytics" />}
           </ListItem>
 
-          <ListItem button>
+          <ListItem component="li">
             <ListItemIcon>
               <ShoppingCart sx={{ color: "#94a3b8" }} />
             </ListItemIcon>
             {isHovered && <ListItemText primary="Ecommerce" />}
           </ListItem>
 
-          <ListItem button>
+          <ListItem component="li">
             <ListItemIcon>
               <AttachMoney sx={{ color: "#94a3b8" }} />
             </ListItemIcon>
@@ -113,28 +111,28 @@ const Sidebar: React.FC<SidebarProps> = ({ onHoverChange }) => {
             )}
           </ListItem>
 
-          <ListItem button>
+          <ListItem component="li">
             <ListItemIcon>
               <ListAlt sx={{ color: "#94a3b8" }} />
             </ListItemIcon>
             {isHovered && <ListItemText primary="Products" />}
           </ListItem>
 
-          <ListItem button>
+          <ListItem component="li">
             <ListItemIcon>
               <ShoppingCart sx={{ color: "#94a3b8" }} />
             </ListItemIcon>
             {isHovered && <ListItemText primary="Orders" />}
           </ListItem>
 
-          <ListItem button>
+          <ListItem component="li">
             <ListItemIcon>
               <Receipt sx={{ color: "#94a3b8" }} />
             </ListItemIcon>
             {isHovered && <ListItemText primary="Invoices" />}
           </ListItem>
 
-          <ListItem button>
+          <ListItem component="li">
             <ListItemIcon>
               <LocalShipping sx={{ color: "#94a3b8" }} />
             </ListItemIcon>

@@ -29,6 +29,7 @@ const LoginPage = () => {
         navigate("/dashboard");
       },
 
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       onError: (err: any) => {
         setError(err?.response?.data?.message || "Invalid login credentials");
       },
