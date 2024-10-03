@@ -1,4 +1,9 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
 import LoginPage from "../pages/LoginPage";
 import DashboardPage from "../pages/DashboardPage";
 import ProtectedRoute from "./ProtectedRoute";
@@ -16,6 +21,7 @@ const AppRouter = () => {
             </ProtectedRoute>
           }
         />
+        <Route path="*" element={<Navigate to="/login" />} />
       </Routes>
     </Router>
   );
