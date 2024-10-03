@@ -2,8 +2,11 @@ import React, { useState } from "react";
 import { useMutation } from "react-query";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import styles from "./styles.module.scss";
-import { TextField, Button, Typography, Link } from "@mui/material";
+import { Typography, Link } from "@mui/material";
+import Input from "../../components/Input";
+import CustomButton from "../../components/Button";
+import theme from "../../theme/theme";
+import { BottomLinks, LoginForm, LoginPageContainer } from "./LoginPage.styles";
 
 const LoginPage = () => {
   const [email, setEmail] = useState("");
@@ -20,8 +23,8 @@ const LoginPage = () => {
     },
     {
       onSuccess: (response) => {
-        const { accessToken } = response.data;
-        localStorage.setItem("token", accessToken);
+        const { token } = response.data;
+        localStorage.setItem("token", token);
 
         navigate("/dashboard");
       },
@@ -45,8 +48,9 @@ const LoginPage = () => {
   };
 
   return (
-    <div className={styles.loginPage}>
-      <form onSubmit={handleLogin} className={styles.loginForm}>
+    <LoginPageContainer>
+      <LoginForm onSubmit={handleLogin}>
+        {" "}
         <Typography variant="h5" component="h1">
           Log in
         </Typography>
@@ -55,43 +59,53 @@ const LoginPage = () => {
             {error}
           </Typography>
         )}
-        <TextField
+        <Typography variant="body2">
+          Don't have an account?{" "}
+          <Link
+            sx={{
+              color: theme.palette.secondary.main,
+              textDecoration: "none",
+            }}
+            href="#"
+          >
+            Register
+          </Link>
+        </Typography>
+        <Input
           label="Email address"
-          variant="outlined"
-          fullWidth
           value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          margin="normal"
+          setValue={setEmail}
           type="email"
         />
-        <TextField
+        <Input
           label="Password"
-          variant="outlined"
-          fullWidth
           value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          margin="normal"
+          setValue={setPassword}
           type="password"
         />
-        <Button
-          variant="contained"
-          fullWidth
-          color="primary"
+        <CustomButton
           type="submit"
-          disabled={mutation.isLoading}
+          mutation={mutation}
+          sx={{
+            backgroundColor: theme.palette.secondary.main,
+          }}
         >
           {mutation.isLoading ? "Logging in..." : "Log in"}
-        </Button>
-        <div className={styles.bottomLinks}>
-          <Link href="#" variant="body2">
+        </CustomButton>
+        <BottomLinks>
+          <Link
+            href="#"
+            variant="body2"
+            sx={{
+              color: theme.palette.secondary.main,
+              textDecoration: "none",
+            }}
+          >
             Forgot password?
           </Link>
-          <Typography variant="body2">
-            Don't have an account? <Link href="#">Register</Link>
-          </Typography>
-        </div>
-      </form>
-    </div>
+        </BottomLinks>
+      </LoginForm>
+    </LoginPageContainer>
   );
 };
 
